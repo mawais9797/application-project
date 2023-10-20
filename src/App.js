@@ -1,24 +1,38 @@
-import logo from './logo.svg';
-import './App.css';
+import logo from "./logo.svg";
+import "./App.css";
+import Topbar from "./screens/Topbar";
+import { BrowserRouter, Route, Router, Routes } from "react-router-dom";
+// import { createTheme } from '@mui/material/styles'
+import { createTheme } from "@mui/material/styles";
+import { colors, ThemeProvider } from "@mui/material";
+import Sidebar from "./screens/Sidebar";
+import Test from "./screens/test";
+
+const theme = createTheme({
+  palette: {
+    myBorderColor: {
+      main: "#3E445E",
+    },
+    badgeColor: {
+      main: "#FF6B00",
+    },
+  },
+});
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <ThemeProvider theme={theme}>
+      <div className="App">
+        <Topbar />
+        <Sidebar />
+        <BrowserRouter>
+          <Routes>
+            <Route path="/topbar" element={<Topbar />} />
+            <Route path="/test" element={<Test />} />
+          </Routes>
+        </BrowserRouter>
+      </div>
+    </ThemeProvider>
   );
 }
 
