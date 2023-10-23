@@ -8,6 +8,7 @@ import {
   ListItemText,
   Popover,
   Button,
+  Box,
 } from "@mui/material";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import ImageIcon from "@mui/icons-material/Image";
@@ -33,8 +34,14 @@ const Test = () => {
   const id = open ? "simple-popover" : undefined;
 
   return (
-    <div>
-      <h2>Language Lddddddist with Popover</h2>
+    <Box
+      margin="19px"
+      borderRadius="4px"
+      padding="10px"
+      backgroundColor="#1B1E31"
+      width="100%"
+    >
+      <h2>Language List</h2>
       <Button
         aria-describedby={id}
         variant="contained"
@@ -72,7 +79,7 @@ const Test = () => {
           ))}
         </List>
       </Popover>
-    </div>
+    </Box>
   );
 };
 

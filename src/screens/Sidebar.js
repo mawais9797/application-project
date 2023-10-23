@@ -17,37 +17,70 @@ import { Link } from "react-router-dom";
 const useStyles = makeStyles({
   container: {
     width: "208px",
+    overflow: "hidden",
+    backgroundColor: "#1B1E31 !important",
+
     "& fieldset": {
       border: "1px solid #3E445E !important",
     },
-    border: "1px dashed white",
-    paddingTop: "10px",
+    // border: "1px dashed white",
+    marginTop: "10px",
     paddingBottom: "10px",
   },
   searchButton: {
     borderRadius: "0px",
-    backgroundColor: "#0D0E17",
+    backgroundColor: "#0D0E17 !important",
     paddingTop: "10px",
+    borderRadius: "0px !important",
     width: "56px",
     height: "56px",
     "&:hover": {
       backgroundColor: "#131521",
+    },
+  },
+  chatAreaScrollbar: {
+    "&:hover": {
+      // height: "300px", // Set the desired height for the scrollbar container
+      overflowY: "auto", // Add a vertical scrollbar when content overflows
+      height: "550px",
+    },
+  },
+  chatAreaHeadingText: {
+    margin: "15px 0 5px 20px !important",
+    color: "#87929E !important",
+    fontSize: "12px !important",
+  },
+  chatTitleArea: {
+    margin: "10px 0px",
+    display: "flex",
+    flexDirection: "row",
+    "&:hover": {
+      backgroundColor: "#26293B !important",
     },
   },
   chatButton: {
-    borderRadius: "0px",
-    backgroundColor: "#0D0E17",
-    paddingTop: "10px",
-    width: "56px",
-    height: "56px",
+    display: "flex",
+    backgroundColor: "inherit ",
+    // color: "#87929E !important",
+    borderRadius: "5px",
+    marginTop: "10px",
+    padding: "10px",
     "&:hover": {
-      backgroundColor: "#131521",
+      // backgroundColor: "#26293B !important",
+      backgroundColor: "#26293B !important",
     },
   },
+
   chatButtonText: {
-    margin: "15px 0 5px 20px",
-    color: "#87929E",
-    fontSize: "12px ",
+    color: "#596570 !important",
+    fontSize: "14px !important",
+    textTransform: "initial",
+    paddingLeft: "5px",
+    paddingRight: "0px",
+  },
+  chatButtonActions: {
+    display: "flex",
+    flexDirection: "row",
   },
 });
 
@@ -82,36 +115,288 @@ const Sidebar = () => {
           </Button>
         </Box>
 
-        <Typography className={classes.chatButtonText}>
-          PREVIOUS 30 DAYS
-        </Typography>
-
-        {/* <Link to="#"> */}
-        <Button
-          style={{
-            display: "flex",
-            backgroundColor: "#26293B",
-            color: "#87929E",
-            borderRadius: "5px",
-            marginTop: "10px",
-            padding: "10px",
-          }}
-        >
-          <img src={penNib} width={25} height={25} />
-          <Typography style={{ fontSize: "12px", paddingLeft: "5px" }}>
-            Chat title
+        <Box className={classes.chatAreaScrollbar}>
+          <Typography className={classes.chatAreaHeadingText}>
+            PREVIOUS 30 DAYS
           </Typography>
-          <Box display="flex" marginLeft="30px">
-            <IconButton style={{ color: "#87929E" }}>
+
+          <Box className={classes.chatTitleArea}>
+            {/*  chat area Box*/}
+            <Button className={classes.chatButton}>
+              {/*chat Button*/}
+              <img src={penNib} width={25} height={25} />
+              <Typography className={classes.chatButtonText}>
+                Chat title
+              </Typography>
+              {/* <span className={classes.chatButtonText}>Chat title</span> */}
+            </Button>
+            <Box className={classes.chatButtonActions}>
               {" "}
-              <RemoveRedEyeOutlinedIcon style={{ marginRight: "5px" }} />
-            </IconButton>
-            <IconButton style={{ color: "#87929E" }}>
-              <DeleteOutlineOutlinedIcon />
-            </IconButton>
+              {/*  chat button actions*/}
+              <IconButton style={{ color: "#87929E" }}>
+                {" "}
+                <RemoveRedEyeOutlinedIcon style={{ marginRight: "5px" }} />
+              </IconButton>
+              <IconButton style={{ color: "#87929E" }}>
+                <DeleteOutlineOutlinedIcon />
+              </IconButton>
+            </Box>
           </Box>
-        </Button>
-        {/* </Link> */}
+          <Box className={classes.chatTitleArea}>
+            {/*  chat area Box*/}
+            <Button className={classes.chatButton}>
+              {/*chat Button*/}
+              <img src={penNib} width={25} height={25} />
+              <Typography className={classes.chatButtonText}>
+                Chat title
+              </Typography>
+              {/* <span className={classes.chatButtonText}>Chat title</span> */}
+            </Button>
+            <Box className={classes.chatButtonActions}>
+              {" "}
+              {/*  chat button actions*/}
+              <IconButton style={{ color: "#87929E" }}>
+                {" "}
+                <RemoveRedEyeOutlinedIcon style={{ marginRight: "5px" }} />
+              </IconButton>
+              <IconButton style={{ color: "#87929E" }}>
+                <DeleteOutlineOutlinedIcon />
+              </IconButton>
+            </Box>
+          </Box>
+          <Box className={classes.chatTitleArea}>
+            {/*  chat area Box*/}
+            <Button className={classes.chatButton}>
+              {/*chat Button*/}
+              <img src={penNib} width={25} height={25} />
+              <Typography className={classes.chatButtonText}>
+                Chat title
+              </Typography>
+              {/* <span className={classes.chatButtonText}>Chat title</span> */}
+            </Button>
+            <Box className={classes.chatButtonActions}>
+              {" "}
+              {/*  chat button actions*/}
+              <IconButton style={{ color: "#87929E" }}>
+                {" "}
+                <RemoveRedEyeOutlinedIcon style={{ marginRight: "5px" }} />
+              </IconButton>
+              <IconButton style={{ color: "#87929E" }}>
+                <DeleteOutlineOutlinedIcon />
+              </IconButton>
+            </Box>
+          </Box>
+          <Box className={classes.chatTitleArea}>
+            {/*  chat area Box*/}
+            <Button className={classes.chatButton}>
+              {/*chat Button*/}
+              <img src={penNib} width={25} height={25} />
+              <Typography className={classes.chatButtonText}>
+                Chat title
+              </Typography>
+              {/* <span className={classes.chatButtonText}>Chat title</span> */}
+            </Button>
+            <Box className={classes.chatButtonActions}>
+              {" "}
+              {/*  chat button actions*/}
+              <IconButton style={{ color: "#87929E" }}>
+                {" "}
+                <RemoveRedEyeOutlinedIcon style={{ marginRight: "5px" }} />
+              </IconButton>
+              <IconButton style={{ color: "#87929E" }}>
+                <DeleteOutlineOutlinedIcon />
+              </IconButton>
+            </Box>
+          </Box>
+
+          {/* *********************** July data ************************** */}
+          <Typography className={classes.chatAreaHeadingText}>
+            July 2023
+          </Typography>
+
+          <Box className={classes.chatTitleArea}>
+            {/*  chat area Box*/}
+            <Button className={classes.chatButton}>
+              {/*chat Button*/}
+              <img src={penNib} width={25} height={25} />
+              <Typography className={classes.chatButtonText}>
+                Chat title
+              </Typography>
+              {/* <span className={classes.chatButtonText}>Chat title</span> */}
+            </Button>
+            <Box className={classes.chatButtonActions}>
+              {" "}
+              {/*  chat button actions*/}
+              <IconButton style={{ color: "#87929E" }}>
+                {" "}
+                <RemoveRedEyeOutlinedIcon style={{ marginRight: "5px" }} />
+              </IconButton>
+              <IconButton style={{ color: "#87929E" }}>
+                <DeleteOutlineOutlinedIcon />
+              </IconButton>
+            </Box>
+          </Box>
+          <Box className={classes.chatTitleArea}>
+            {/*  chat area Box*/}
+            <Button className={classes.chatButton}>
+              {/*chat Button*/}
+              <img src={penNib} width={25} height={25} />
+              <Typography className={classes.chatButtonText}>
+                Chat title
+              </Typography>
+              {/* <span className={classes.chatButtonText}>Chat title</span> */}
+            </Button>
+            <Box className={classes.chatButtonActions}>
+              {" "}
+              {/*  chat button actions*/}
+              <IconButton style={{ color: "#87929E" }}>
+                {" "}
+                <RemoveRedEyeOutlinedIcon style={{ marginRight: "5px" }} />
+              </IconButton>
+              <IconButton style={{ color: "#87929E" }}>
+                <DeleteOutlineOutlinedIcon />
+              </IconButton>
+            </Box>
+          </Box>
+          <Box className={classes.chatTitleArea}>
+            {/*  chat area Box*/}
+            <Button className={classes.chatButton}>
+              {/*chat Button*/}
+              <img src={penNib} width={25} height={25} />
+              <Typography className={classes.chatButtonText}>
+                Chat title
+              </Typography>
+              {/* <span className={classes.chatButtonText}>Chat title</span> */}
+            </Button>
+            <Box className={classes.chatButtonActions}>
+              {" "}
+              {/*  chat button actions*/}
+              <IconButton style={{ color: "#87929E" }}>
+                {" "}
+                <RemoveRedEyeOutlinedIcon style={{ marginRight: "5px" }} />
+              </IconButton>
+              <IconButton style={{ color: "#87929E" }}>
+                <DeleteOutlineOutlinedIcon />
+              </IconButton>
+            </Box>
+          </Box>
+          <Box className={classes.chatTitleArea}>
+            {/*  chat area Box*/}
+            <Button className={classes.chatButton}>
+              {/*chat Button*/}
+              <img src={penNib} width={25} height={25} />
+              <Typography className={classes.chatButtonText}>
+                Chat title
+              </Typography>
+              {/* <span className={classes.chatButtonText}>Chat title</span> */}
+            </Button>
+            <Box className={classes.chatButtonActions}>
+              {" "}
+              {/*  chat button actions*/}
+              <IconButton style={{ color: "#87929E" }}>
+                {" "}
+                <RemoveRedEyeOutlinedIcon style={{ marginRight: "5px" }} />
+              </IconButton>
+              <IconButton style={{ color: "#87929E" }}>
+                <DeleteOutlineOutlinedIcon />
+              </IconButton>
+            </Box>
+          </Box>
+
+          {/* *********************** June data ************************** */}
+          <Typography className={classes.chatAreaHeadingText}>
+            June 2023
+          </Typography>
+
+          <Box className={classes.chatTitleArea}>
+            {/*  chat area Box*/}
+            <Button className={classes.chatButton}>
+              {/*chat Button*/}
+              <img src={penNib} width={25} height={25} />
+              <Typography className={classes.chatButtonText}>
+                Chat title
+              </Typography>
+              {/* <span className={classes.chatButtonText}>Chat title</span> */}
+            </Button>
+            <Box className={classes.chatButtonActions}>
+              {" "}
+              {/*  chat button actions*/}
+              <IconButton style={{ color: "#87929E" }}>
+                {" "}
+                <RemoveRedEyeOutlinedIcon style={{ marginRight: "5px" }} />
+              </IconButton>
+              <IconButton style={{ color: "#87929E" }}>
+                <DeleteOutlineOutlinedIcon />
+              </IconButton>
+            </Box>
+          </Box>
+          <Box className={classes.chatTitleArea}>
+            {/*  chat area Box*/}
+            <Button className={classes.chatButton}>
+              {/*chat Button*/}
+              <img src={penNib} width={25} height={25} />
+              <Typography className={classes.chatButtonText}>
+                Chat title
+              </Typography>
+              {/* <span className={classes.chatButtonText}>Chat title</span> */}
+            </Button>
+            <Box className={classes.chatButtonActions}>
+              {" "}
+              {/*  chat button actions*/}
+              <IconButton style={{ color: "#87929E" }}>
+                {" "}
+                <RemoveRedEyeOutlinedIcon style={{ marginRight: "5px" }} />
+              </IconButton>
+              <IconButton style={{ color: "#87929E" }}>
+                <DeleteOutlineOutlinedIcon />
+              </IconButton>
+            </Box>
+          </Box>
+          <Box className={classes.chatTitleArea}>
+            {/*  chat area Box*/}
+            <Button className={classes.chatButton}>
+              {/*chat Button*/}
+              <img src={penNib} width={25} height={25} />
+              <Typography className={classes.chatButtonText}>
+                Chat title
+              </Typography>
+              {/* <span className={classes.chatButtonText}>Chat title</span> */}
+            </Button>
+            <Box className={classes.chatButtonActions}>
+              {" "}
+              {/*  chat button actions*/}
+              <IconButton style={{ color: "#87929E" }}>
+                {" "}
+                <RemoveRedEyeOutlinedIcon style={{ marginRight: "5px" }} />
+              </IconButton>
+              <IconButton style={{ color: "#87929E" }}>
+                <DeleteOutlineOutlinedIcon />
+              </IconButton>
+            </Box>
+          </Box>
+          <Box className={classes.chatTitleArea}>
+            {/*  chat area Box*/}
+            <Button className={classes.chatButton}>
+              {/*chat Button*/}
+              <img src={penNib} width={25} height={25} />
+              <Typography className={classes.chatButtonText}>
+                Chat title
+              </Typography>
+              {/* <span className={classes.chatButtonText}>Chat title</span> */}
+            </Button>
+            <Box className={classes.chatButtonActions}>
+              {" "}
+              {/*  chat button actions*/}
+              <IconButton style={{ color: "#87929E" }}>
+                {" "}
+                <RemoveRedEyeOutlinedIcon style={{ marginRight: "5px" }} />
+              </IconButton>
+              <IconButton style={{ color: "#87929E" }}>
+                <DeleteOutlineOutlinedIcon />
+              </IconButton>
+            </Box>
+          </Box>
+        </Box>
       </Box>
     </Box>
   );

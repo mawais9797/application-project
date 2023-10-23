@@ -1,0 +1,24 @@
+/* .App {
+  display: flex;
+  height: 100vh;
+} */
+
+.content {
+  display: flex;
+  flex: 1;
+  overflow: hidden; /* Ensures that the content area doesn't overflow */
+}
+
+.sidebar {
+  width: 250px;
+  background-color: #161827;
+  color: #87929e;
+  /* Add any other styles for the sidebar */
+}
+
+.main-content {
+  flex: 1;
+  padding: 20px;
+  overflow-y: auto; /* Add a scrollbar for the content area if it overflows */
+  /* Add any other styles for the main content */
+}

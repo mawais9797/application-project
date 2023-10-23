@@ -1,11 +1,20 @@
 .App {
+  /* background-color: #292f4c; */
+  /* background-color: #1b1e31; */
   background-color: #292f4c;
-  height: 100vh;
+  /* height: 100vh; */
+  /* overflowY: "auto", */
+  /* overflow-y: auto; */
   color: white;
-  padding-left: 10vh;
+  padding-left: 5vh;
   padding-top: 5vh;
-  padding-right: 10vh;
+  padding-right: 7vh;
   padding-bottom: 10vh;
+}
+
+.content {
+  height: 100%;
+  width: 100%;
 }
 
 .App-logo {
